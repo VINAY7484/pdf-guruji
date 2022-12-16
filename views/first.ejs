@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+NPM <html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>About Us - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=f5d56c7e12de65353f0fe6a289d94ea3">
+    <link rel="stylesheet" href="assets/css/Montserrat.css?h=528fb90ed9ed72b94dd3f3f7e5f56457">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css?h=1ebaba3465f39106375be623a0ebab45">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css?h=e737f76df021b46fa7180f48799a5d20">
+</head>
+
+<body>
+    <!-------------navbar--------->
+    <%-include('navbar')-%>
+    <!-------------navbar end--------->
+
+    
+    
+    
+        
+
+    <div class="row justify-content-center" style="margin-top:10% ; margin-bottom: 10%;">
+        <% for(var i=0;i<data.length;i++) 
+        {
+        %>
+        
+        <div class="col-md-5 feature-box"  color-gradient="blue, red" style="color:black; border:1px solid black; border-radius: 20px; " > 
+            <form action="first" method="post" name="id">
+            <center>
+            <h4 class="title" data-abc="true" id="p<%= (i+1) %>"> <%= data[i].name %> </h4>
+            <h4 class="title" data-abc="true" id="p<%= (i+1) %>"> <%= data[i].subject %> </h4>
+            <h4><a href="<%= data[i].pdf %>" id="img<%= (i+1) %>"  target="_blank">download</a>
+            <h4><iframe="<%= data[i].pdf %>" id="pdf<%= (i+1) %>" target="_blank" >
+            <input type="submit" value="download"></a></h4>
+            </center></form> 
+         </div> 
+        <br> 
+
+
+         <% } %> 
+        <!-----------
+        <div class="col-md-5 feature-box"><i class="icon-book-open icon"></i>
+            <h4>Books PDF</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+        </div>
+        <div class="col-md-5 feature-box"><i class="icon-note icon"></i>
+            <h4>Quantum for previous year</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+        </div>
+        <div class="col-md-5 feature-box"><i class="icon-refresh icon"></i>
+            <h4>All Browser Compatibility</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+        </div>
+        -->
+    </div>
+    
+    
+     <!---------------footer--------------->
+    <%-include('footer')-%>
+    <!---------------footer end--------------->
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=01bb7ae0c0b11509558f2aa83f244399"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js?h=6a37ea9c996b05f763161c73127d66bc"></script>
+    <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
+</body>
+
+</html>
